@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>LOGIN REGISTRATION FORM</title>
+<link href="CSS/STYLES1.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationPassword.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationConfirm.css" rel="stylesheet" type="text/css" />
+<link href="jQueryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationPassword.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationConfirm.js" type="text/javascript"></script>
+<script src="jQueryAssets/SpryValidationSelect.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<!--Adobe Edge Runtime-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script type="text/javascript" charset="utf-8" src="edge_includes/edge.5.0.1.min.js"></script>
+    <style>
+        .edgeLoad-EDGE-25323261 { visibility:hidden; }
+        img { display: block; }
+    </style>
+<script>
+   AdobeEdge.loadComposition('REGISTRATION', 'EDGE-25323261', {
+    scaleToFit: "none",
+    centerStage: "none",
+    minW: "0",
+    maxW: "undefined",
+    width: "undefined",
+    height: "undefined"
+}, {dom: [ ]}, {dom: [ ]});
+</script>
+<!--Adobe Edge Runtime End-->
+
+</head>
+<body onload="MM_preloadImages('images/dollars.jpg')">
+<div class="container">
+  <div class="header"><a href="#"><img src="images/bg 2.jpg" alt="Insert Logo Here" name="Insert_logo" width="1520" height="242" id="Insert_logo" style="text-align: center; font-size: xx-large; background-color: #FFFFFF; display: block; color: #000066; font-family: Calibri; font-weight: bolder;" onmouseover="MM_swapImage('Insert_logo','','images/dollars.jpg',1)" onmouseout="MM_swapImgRestore()" /></a>EASY ONLINE BANKING</div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="LOGIN.html">User Login</a></li>
+      <li class="active"><a href="REGISTRATION.html">Register Here</a></li>
+    </ul>
+    <p>&nbsp;</p>
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+    <h1>REGISTRATION</h1>
+    <form action="Register.jsp" method="post" name="REGISTRATION" target="_self" id="REGISTRATION">
+      <table width="1277" height="545" border="0">
+        <tr>
+          <td width="255" height="65"><h3>BANK NAME</h3></td>
+          <td width="51"><h3>:</h3></td>
+          <td width="569"><span id="spryselect1">
+            <select name="Bname" id="Bname">
+              <option value="-1">Select Bank</option>
+              <option value="AXIS">Axis</option>
+              <option value="SBI">Sbi</option>
+              <option value="PUNJAB">Punjab</option>
+              <option value="ICICI">ICICI</option>
+            </select>
+          <span class="selectInvalidMsg">Please select a Bank.</span><span class="selectRequiredMsg">Please select an item.</span></span></td>
+        </tr>
+        <tr>
+          <td height="61"><h3>USER NAME</h3></td>
+          <td><h3>:</h3></td>
+          <td><label for="NAME"></label>
+            <span id="SPRYNAME">
+            <input name="NAME" type="text" class="FIELD" id="NAME" />
+          <span class="textfieldRequiredMsg">Name is required.</span></span></td>
+        </tr>
+        <tr>
+          <td height="65"><h3>ACCOUNT NUMBER</h3></td>
+          <td><h3>:</h3></td>
+          <td><label for="ACNUMBER"></label>
+            <span id="SPRYID">
+            <input name="ACNUMBER" type="text" class="FIELD" id="ACNUMBER" />
+            <span class="textfieldRequiredMsg">Required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td>
+        </tr>
+        <tr>
+          <td height="65"><h3>ACCOUNT PIN</h3></td>
+          <td><h3>:</h3></td>
+          <td><label for="ACNUMBER"></label>
+            <span id="SPRYID4">
+            <input name="ACPIN" type="password" class="FIELD" id="ID" />
+            <span class="textfieldRequiredMsg">PIN  is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td>
+        </tr>
+        <tr>
+          <td height="65"><h3>EMAIL ADDRESS</h3></td>
+          <td><h3>:</h3></td>
+          <td><label for="ACNUMBER"></label>
+            <span id="SPRYID3">
+            <input name="EID" type="text" class="FIELD" id="EID" />
+            <span class="textfieldRequiredMsg">Id is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td>
+        </tr>
+        <tr>
+          <td height="73"><h3>PASSWORD</h3></td>
+          <td><h3>:</h3></td>
+          <td><label for="PASSWORD"></label>
+            <span id="SPRYPASSWORD">
+            <input name="PASSWORD" type="password" class="FIELD" id="PASSWORD" />
+          <span class="passwordRequiredMsg">Password is required.</span></span></td>
+        </tr>
+        <tr>
+          <td height="59"><h3>CONFRIM PASSWORD </h3></td>
+          <td><h3>:</h3></td>
+          <td><label for="CPASSWORD"></label>
+            <span id="SPRYCONFRIM">
+            <input name="CPASSWORD" type="password" class="FIELD" id="CPASSWORD" />
+          <span class="confirmRequiredMsg">Password  is required.</span><span class="confirmInvalidMsg">Password don't match.</span></span></td>
+        </tr>
+        <tr>
+          <td height="74" colspan="3"><table width="884" height="66" border="0">
+            <tr>
+              <td width="276"><div align="center">
+                <input name="SUBMIT" type="submit" class="SUBMIT" form="REGISTRATION" formaction="Register.jsp" formmethod="POST" value="SUBMIT"/>
+                </div></td>
+              <td width="382"><div align="center">
+                      <div align="center">
+                        <input name="RESET" type="reset" class="CANCEL" id="BUTTON1" value="RESET"/>
+                      </div>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+    </form>
+    <p>&nbsp;</p>
+    <!-- end .content --></div>
+  <div class="footer">
+    <p>&nbsp;</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+<script type="text/javascript">
+var sprypassword1 = new Spry.Widget.ValidationPassword("SPRYPASSWORD", {validateOn:["change"]});
+var sprytextfield2 = new Spry.Widget.ValidationTextField("SPRYNAME", "none", {validateOn:["change"]});
+var spryconfirm1 = new Spry.Widget.ValidationConfirm("SPRYCONFRIM", "PASSWORD", {validateOn:["change"]});
+var sprytextfield1 = new Spry.Widget.ValidationTextField("SPRYID", "integer", {validateOn:["change"]});
+var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1", {invalidValue:"-1", validateOn:["blur"]});
+var sprytextfield1 = new Spry.Widget.ValidationTextField("SPRYID3", "email", {validateOn:["change"]});
+var sprytextfield1 = new Spry.Widget.ValidationTextField("SPRYID4", "integer", {validateOn:["change"]});
+</script>
+</body>
+    
+</html>

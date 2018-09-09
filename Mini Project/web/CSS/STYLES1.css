@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+	-webkit-transition: all 2s cubic-bezier(x1,y1,x2,y2) 2s;
+	-moz-transition: all 2s cubic-bezier(x1,y1,x2,y2) 2s;
+	-ms-transition: all 2s cubic-bezier(x1,y1,x2,y2) 2s;
+	-o-transition: all 2s cubic-bezier(x1,y1,x2,y2) 2s;
+	transition: all 2s cubic-bezier(x1,y1,x2,y2) 2s;
+}
+
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #000066; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+	font-size: medium;
+	font-weight: bolder;
+	font-family: Verdana, Geneva, sans-serif;
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+	color: #000080;
+	font-weight: bolder;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: medium;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	width: 100%;
+	background-color: #FFF; /* the auto value on the sides, coupled with the width, centers the layout */
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	border: 1px solid rgba(74,88,255,1);
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: #FFFFFF;
+	font-size: xx-large;
+	font-weight: bold;
+	color: rgba(0,0,153,1);
+	text-decoration: none;
+	text-align: center;
+	border: 1px solid rgba(0,0,255,1);
+}
+.sidebar1 {
+	float: left;
+	width: 200px;
+	background-color: #C4E3FB;
+	padding-bottom: 10px;
+	height: 1000px;
+	border: 1px solid rgba(0,0,255,1);
+}
+.content {
+	width: 1277px;
+	float: left;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; 
+}
+ul.nav1{
+	list-style: none; 
+	border-top: 1px solid #666;
+	margin-bottom: 15px; 
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+	font-family: Calibri;
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+	background-color: rgba(0,0,102,1);
+}
+ul.nav a,ul.ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 180px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #000066;
+	color: rgba(255,255,255,1);
+	font-family: Calibri;
+	font-size: large;
+	font-weight: bolder;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(255,255,255,1);
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	border-bottom-width: 1px;
+}
+ul.nav a:hover,ul.nav a:focus, ul.nav li.active a {  
+	background-color: #FFFFFF;
+	color: #006;
+	font-family: Calibri;
+	text-decoration: none;
+	background-image: url(../images/s-leaf-1.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	text-align: center;
+	border: 1px solid rgba(0,0,102,1);
+	width: 177px;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	background-color: #6570F5;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	height: 60px;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+	border: 1px solid rgba(0,0,153,1);
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.FIELD {
+	height: 30px;
+	font-family: Calibri;
+	font-size: large;
+	color: rgba(0,0,0,1);
+	vertical-align: middle;
+	width: 350px;
+}
+.SUBMIT {
+	font-family: Calibri;
+	font-size: large;
+	font-weight: bolder;
+	color: rgba(0,0,0,1);
+	text-decoration: none;
+	background-color: rgba(70,217,73,1);
+	height: 30px;
+	width: 70px;
+}
+.CANCEL {
+	font-family: Calibri;
+	font-size: large;
+	color: rgba(0,0,0,1);
+	background-color: rgba(255,153,0,1);
+	font-weight: bolder;
+	text-transform: none;
+	height: 30px;
+	width: 70px;
+}
+#Bname {
+	width: 127px;
+	height: 30px;
+	font-size: large;
+}
+
+.Mail {
+	font-family: Calibri;
+	font-size: large;
+	font-weight: bolder;
+	color: rgba(0,0,0,1);
+	text-decoration: none;
+	background-color: rgba(70,217,73,1);
+	height: 49px;
+	width: 201px;
+}
