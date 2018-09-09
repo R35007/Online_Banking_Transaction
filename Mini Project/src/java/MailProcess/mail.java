@@ -87,13 +87,13 @@ HttpSession session1;String pg,to,subject,body,bank,acnt,amnt,to2,subject2,body2
                     new javax.mail.Authenticator() {
                         @Override
                         protected PasswordAuthentication getPasswordAuthentication() {
-                            return new PasswordAuthentication("Mycount.siva@gmail.com","asdf123!@");
+                            return new PasswordAuthentication("your Mail Address","password");
                         }
                     });
  
   try {
    MimeMessage message1 = new MimeMessage(session);
-   message1.setFrom(new InternetAddress("Mycount.siva@gmail.com"));//change accordingly
+   message1.setFrom(new InternetAddress("example@gmail.com"));//change accordingly
    message1.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
    message1.setSubject(subject);
    message1.setText(body);
@@ -105,7 +105,7 @@ HttpSession session1;String pg,to,subject,body,bank,acnt,amnt,to2,subject2,body2
    if(pg.equals("Transact"))
    {
        MimeMessage message2 = new MimeMessage(session);
-   message2.setFrom(new InternetAddress("Mycount.siva@gmail.com"));//change accordingly
+   message2.setFrom(new InternetAddress("example@gmail.com"));//change accordingly
    message2.addRecipient(Message.RecipientType.TO,new InternetAddress(to2));
    message2.setSubject(subject2);
    message2.setText(body2);
